@@ -7,8 +7,7 @@ font-family: 'Roboto', sans-serif; */
   --title-color: #212121;
   --standard-clearance: 30px;
   --primary-svg-color: #afb1b8;
-  --primary-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --primary-duration: 250ms;
+  --transition-duration-and-funk: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* utils */
@@ -110,7 +109,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  transition: color var(--primary-duration) var(--primary-timing-function);
+  transition: color var(--transition-duration-and-funk);
 }
 
 .nav-list .link:hover,
@@ -136,8 +135,8 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  transition: color var(--primary-duration) var(--primary-timing-function),
-    fill var(--primary-duration) var(--primary-timing-function);
+  transition: color var(--transition-duration-and-funk),
+    fill var(--transition-duration-and-funk);
 }
 
 .contacts-list .contact {
@@ -205,8 +204,7 @@ body {
   letter-spacing: 0.06em;
   text-align: center;
 
-  transition: background-color var(--primary-duration)
-    var(--primary-timing-function);
+  transition: background-color var(--transition-duration-and-funk);
 }
 .hero .button:hover,
 .hero .button:focus {
@@ -289,6 +287,25 @@ body {
   margin-bottom: var(--standard-clearance);
 }
 
+.skill-list > .item > .thumb {
+  position: relative;
+}
+
+.skill-description {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+
+  padding: 27px;
+  background: rgba(47, 48, 58, 0.8);
+}
+
 .skill-list .img-box {
   display: block;
   max-width: 100%;
@@ -367,9 +384,8 @@ body {
   margin-right: 10px;
 
   fill: var(--primary-svg-color);
-  transition: background-color var(--primary-duration)
-      var(--primary-timing-function),
-    fill var(--primary-duration) var(--primary-timing-function);
+  transition: background-color var(--transition-duration-and-funk),
+    fill var(--transition-duration-and-funk);
 }
 
 .social-link-list .icon {
@@ -391,7 +407,7 @@ body {
   margin-right: calc(-1 * var(--standard-clearance));
 }
 
-.thumb {
+.client-list .thumb {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -404,8 +420,8 @@ body {
   border-radius: 4px;
   fill: var(--primary-svg-color);
 
-  transition: fill var(--primary-duration) var(--primary-timing-function),
-    border-color var(--primary-duration) var(--primary-timing-function);
+  transition: fill var(--transition-duration-and-funk),
+    border-color var(--transition-duration-and-funk);
 }
 
 .client-list .icon {
@@ -468,8 +484,7 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   fill: var(--primary-white-color);
 
-  transition: background-color var(--primary-duration) var(--primary-timing-function);
-
+  transition: background-color var(--transition-duration-and-funk);
 }
 
 .futer .social-link-list .social-link:focus,
@@ -509,8 +524,9 @@ body {
   border-radius: 4px;
   border: 0;
 
-    transition: background-color var(--primary-duration) var(--primary-timing-function), color var(--primary-duration) var(--primary-timing-function);
-
+  transition: background-color var(--transition-duration-and-funk),
+    color var(--transition-duration-and-funk),
+    box-shadow var(--transition-duration-and-funk);
 }
 
 .filter-list .button:focus,
@@ -549,8 +565,8 @@ body {
   line-height: 1.88;
 }
 
-.work-card{
- transition: box-shadow var(--primary-duration) var(--primary-timing-function);
+.work-card {
+  transition: box-shadow var(--transition-duration-and-funk);
 }
 
 .work-card:hover,

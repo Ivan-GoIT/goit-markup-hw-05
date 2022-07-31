@@ -640,6 +640,7 @@ body {
   left: 50%;
 
   transform: translate(-50%, -50%);
+  animation-timing-function:linear;
   animation: modal-animate 2000ms 1;
 
   min-width: 528px;

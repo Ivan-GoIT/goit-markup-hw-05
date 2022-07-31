@@ -640,8 +640,7 @@ body {
   left: 50%;
 
   transform: translate(-50%, -50%);
-  animation-timing-function:linear;
-  animation: modal-animate 2000ms 1;
+  animation: modal-animate 2000ms linear;
 
   min-width: 528px;
   min-height: 581px;
@@ -655,6 +654,10 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.backdrop.is-hidden > .modal {
+  animation-name: none;
 }
 
 .button.close-modal {
@@ -678,25 +681,25 @@ body {
 
 @keyframes modal-animate {
   0% {
-    transform: scale(0.2);
+    transform: translate(-50%, -50%) scale(0.2);
   }
 
   60% {
-    transform: scale(1.07);
+    transform: translate(-50%, -50%) scale(1.07);
   }
   70% {
-    transform: scale(0.95);
+    transform: translate(-50%, -50%) scale(0.95);
   }
   80% {
-    transform: scale(1.02);
+    transform: translate(-50%, -50%) scale(1.02);
   }
 
   90% {
-    transform: scale(0.98);
+    transform: translate(-50%, -50%) scale(0.98);
   }
 
   100% {
-    transform: scale(1);
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 

@@ -321,6 +321,10 @@ body {
   background: rgba(47, 48, 58, 0.8);
 }
 
+.skill-description > .title {
+  font-size: inherit;
+}
+
 .skill-list .img-box {
   display: block;
   max-width: 100%;
@@ -632,6 +636,7 @@ body {
   z-index: 100;
 
   background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 1000ms linear, visibility 1000ms linear;
 }
 
 .modal {
@@ -640,7 +645,6 @@ body {
   left: 50%;
 
   transform: translate(-50%, -50%);
-  animation: modal-animate 2000ms linear;
 
   min-width: 528px;
   min-height: 581px;
@@ -648,6 +652,8 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  animation: modal-animate-open 2000ms linear;
 }
 
 .backdrop.is-hidden {
@@ -679,11 +685,10 @@ body {
   cursor: pointer;
 }
 
-@keyframes modal-animate {
+@keyframes modal-animate-open {
   0% {
     transform: translate(-50%, -50%) scale(0.2);
   }
-
   60% {
     transform: translate(-50%, -50%) scale(1.07);
   }
@@ -693,11 +698,9 @@ body {
   80% {
     transform: translate(-50%, -50%) scale(1.02);
   }
-
   90% {
     transform: translate(-50%, -50%) scale(0.98);
   }
-
   100% {
     transform: translate(-50%, -50%) scale(1);
   }
